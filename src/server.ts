@@ -1,14 +1,15 @@
-import { PORT } from "./config";
-function welcome(name: string) {
-    console.log("welcome " + name);
-    console.log("firstname");
-}
+import app from "./app.ts";
+import { PORT } from "./config/index.ts";
 
-const user = {
-    name: "shivam",
-    age: 25,
+const startServer = () => {
+    try {
+        app.listen(PORT, () => {
+            console.log("server is running on port", PORT);
+        });
+    } catch (err) {
+        console.error(err);
+        process.exit(1);
+    }
 };
 
-console.log(PORT, user);
-
-welcome("shivam");
+startServer();
