@@ -32,5 +32,10 @@
     "url": "https://github.com/1thenameisshivam/mernspace-c-authService/issues"
   },
   "homepage": "https://github.com/1thenameisshivam/mernspace-c-authService#readme",
-  "description": ""
+  "description": "",
+
+  "lint-staged": {
+    "*.ts":["npm run lint:fix","npm run format:fix"]
+  
+  }
 }
