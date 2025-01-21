@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "@eslint/js": "^9.18.0",
+    "@types/node": "^22.10.7",
     "@typescript-eslint/eslint-plugin": "^8.21.0",
     "@typescript-eslint/parser": "^8.21.0",
     "eslint": "^9.18.0",
@@ -13,6 +14,7 @@
   "name": "auth_service",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "node src/server.js",
     "format:fix": "prettier --write .",
@@ -33,9 +35,13 @@
   },
   "homepage": "https://github.com/1thenameisshivam/mernspace-c-authService#readme",
   "description": "",
-
   "lint-staged": {
-    "*.ts":["npm run lint:fix","npm run format:fix"]
-  
+    "*.ts": [
+      "npm run lint:fix",
+      "npm run format:fix"
+    ]
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
   }
 }
