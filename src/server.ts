@@ -8,7 +8,7 @@ const startServer = () => {
             logger.info("server is running on port ", { port: PORT });
         });
     } catch (err) {
-        console.error(err);
+        logger.error(err);
         process.exit(1);
     }
 };
