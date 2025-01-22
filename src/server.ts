@@ -1,10 +1,11 @@
 import app from "./app.ts";
 import { PORT } from "./config/index.ts";
+import logger from "./config/logger.ts";
 
 const startServer = () => {
     try {
         app.listen(PORT, () => {
-            console.log("server is running on port", PORT);
+            logger.info("server is running on port ", { port: PORT });
         });
     } catch (err) {
         console.error(err);
