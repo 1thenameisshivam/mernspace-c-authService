@@ -13,7 +13,7 @@ const logger = winston.createLogger({
                 winston.format.colorize(),
                 winston.format.json(),
             ),
-            silent: NODE_ENV == "test",
+            silent: NODE_ENV == "development",
         }),
 
         new winston.transports.File({
@@ -25,7 +25,7 @@ const logger = winston.createLogger({
                 winston.format.colorize(),
                 winston.format.json(),
             ),
-            silent: NODE_ENV == "test",
+            silent: NODE_ENV == "development",
         }),
 
         new winston.transports.Console({
